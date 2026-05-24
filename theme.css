@@ -464,8 +464,17 @@ settings:
   --ctp-surface1: 69, 71, 90;
   --ctp-surface2: 88, 91, 112;
 
-  /* Darker teal accent for titlebar */
-  --ctp-sapphire: 11, 128, 140;
+  /* Darker teal accent for titlebar — ~86% of original brightness */
+  --ctp-sapphire: 14, 158, 172;
+
+  /* Active sidebar tab: must stay darker than the titlebar accent
+     so the selected tab reads as sunken, not raised */
+  --sp-teal-dark: #0B808C;
+}
+
+/* Popover titlebar is hardcoded — must be overridden separately */
+.sp-darker-dark.theme-dark .popover-titlebar {
+  background-color: #0E9EAC;
 }
 
 /* Dark mode inline title */
