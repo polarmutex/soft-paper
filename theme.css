@@ -108,6 +108,12 @@ settings:
     description: Switch from ACE-colored (5 hues) to full 11-color rainbow folders (snippet provided by Joel Anderson)
     type: class-toggle
     default: false
+  -
+    id: sp-darker-dark
+    title: Darker Dark Mode
+    description: Deepens the dark mode backgrounds (Mocha palette) and darkens the title bar blue accent
+    type: class-toggle
+    default: false
 */
 
 /*===============================================================
@@ -441,6 +447,25 @@ settings:
 
 .theme-dark.theme-dark {
   --canvas-color: var(--ctp-overlay0);
+}
+
+/*===============================================================
+ * DARKER DARK MODE (Style Settings toggle: sp-darker-dark)
+ * Overrides Frappé palette with Mocha values for backgrounds
+ * and deepens the teal/blue titlebar accent color.
+ *===============================================================*/
+
+.sp-darker-dark.theme-dark {
+  /* Mocha backgrounds (darker than Frappé) */
+  --ctp-base: 30, 30, 46;
+  --ctp-mantle: 24, 24, 37;
+  --ctp-crust: 17, 17, 27;
+  --ctp-surface0: 49, 50, 68;
+  --ctp-surface1: 69, 71, 90;
+  --ctp-surface2: 88, 91, 112;
+
+  /* Darker teal accent for titlebar */
+  --ctp-sapphire: 11, 128, 140;
 }
 
 /* Dark mode inline title */
